@@ -1,26 +1,24 @@
-import {web3} from 'web3';  
-
-const isMMInstalled =() => {
-  const {ethereum} = window; 
-
-}
-
-async function  connectMm  (){
-    if(isMMInstalled){
-      await ethereum.request({method: 'eth_requestAccounts'})
-    }
-}
-
-
-
-
+import { useState, useRef } from "react";
+import { ethers } from "ethers";
 
 
 function ChainInfo(){
+const [msg, setMsg] = useState();
+const [accnt, setAccnt] = useState();
+
+const ConnectMetamask = async () => {
+    const { ethereum } = window;
+    if (ethereum.isMetaMask){
+      await ethereum.request({ method: "eth_requestAccounts" });
+      const accounts = await ethereum.request({ method: "eth_accounts" });
+    }else{
+      setMsg("Please install metamask");
+    }
+  }
 
     return (
         <div>
-            <button onclick={connectMm}>Connect Wallet</button>
+            <button onclick={ConnectMetamask}>Connect Wallet</button>
         </div>
     )
 }
