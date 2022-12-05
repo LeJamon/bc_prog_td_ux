@@ -1,24 +1,19 @@
 import { useState, useRef } from "react";
 import { ethers } from "ethers";
-
-
-function ChainInfo(){
-const [msg, setMsg] = useState();
-const [accnt, setAccnt] = useState();
-
-const ConnectMetamask = async () => {
-    const { ethereum } = window;
-    if (ethereum.isMetaMask){
-      await ethereum.request({ method: "eth_requestAccounts" });
-      const accounts = await ethereum.request({ method: "eth_accounts" });
-    }else{
-      setMsg("Please install metamask");
-    }
-  }
-
+import Connect from "../../utils/Connect";
+import Web3 from "web3";
+function ChainInfo() {
+  Connect(); 
+  const {ethereum} = window; 
+  window.web3 = new Web3(window.ethereum);
+  const account = ethereum.selectedAddress;  
+  
     return (
         <div>
-            <button onclick={ConnectMetamask}>Connect Wallet</button>
+            <div>{account}</div>
+            <br></br>
+            <br></br>
+            
         </div>
     )
 }
