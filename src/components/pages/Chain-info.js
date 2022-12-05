@@ -1,15 +1,14 @@
 import { useState, useRef } from "react";
-import { ethers } from "ethers";
-import Connect from "../../utils/Connect";
 import Web3 from "web3";
-
 
 function ChainInfo(){
 
+//state zone
 const [account, setAccount] = useState(); 
 const [chain, setChain] = useState(); 
 const [block, setblock] = useState(); 
 
+//comportement zone
 const info = async()=>  {
 
   const {ethereum} = window; 
@@ -25,8 +24,7 @@ const info = async()=>  {
 
  }
 
-
-  let a = info; 
+ //render
     return (
         <div>
           <button onClick={info}>Click here to get info</button>
