@@ -18,7 +18,6 @@ var contract = new web3.eth.Contract(contract_abi, contract_address);
 
  
 
-
 async function GetSupplyAndName(){
  
     let a = await contract.methods.tokenCounter().call();
@@ -29,13 +28,12 @@ async function GetSupplyAndName(){
 
 async function MintNft(){
  
-    //use window.ethereum to get the account
+    //use window.ethereum to get the account instead of the var web3
     const accounts = await window.ethereum.request({method: 'eth_requestAccounts' }); 
     await contract.methods.claimAToken().send({from: accounts[0]}).then(console.log); 
 }
 
 
- 
     return(
         <div>
         <button onClick={GetSupplyAndName}>get Name and Supply</button>
