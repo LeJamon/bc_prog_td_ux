@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState} from "react";
 import Web3 from "web3";
 
 function ChainInfo(){
@@ -11,11 +11,10 @@ const [block, setblock] = useState();
 //comportement zone
 const info = async()=>  {
 
-  const {ethereum} = window; 
-  const _account = ethereum.selectedAddress; 
-  const chainId =  ethereum.networkVersion;  
+  
   const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
-  window.web3 = new Web3(window.ethereum);
+  const _account = await web3.eth.getAccounts(); 
+  const chainId =  await web3.eth.getChainId();  
   let lastblock = await web3.eth.getBlockNumber();
 
   setAccount(_account); 
@@ -32,9 +31,7 @@ const info = async()=>  {
             <br></br>
             <div>{chain}</div>
             <br></br>
-            <div>{block }</div>
-
-            
+            <div>{block }</div>      
         </div>
     ); 
 }

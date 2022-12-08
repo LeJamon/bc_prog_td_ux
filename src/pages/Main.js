@@ -1,8 +1,6 @@
 function Main(){
     return(
-        <div>
-
-        </div>
+        <h1>main pages</h1>
     )
 }
 export default Main; 

@@ -1,7 +1,7 @@
 function NotFound(){
     return (
         <div>
-            <text>Oh somithing went wrong, not found</text>
+            <div>Oh somithing went wrong, not found</div>
             <div>
                 <button>main page</button>
             </div>

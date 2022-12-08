@@ -22,6 +22,9 @@ function Connect() {
     });
   }
   const web3 = new Web3(provider);
+  return(
+    <button onClick={Connect}>Connect Wallet</button>
+  )
 };
 
 export default Connect; 
