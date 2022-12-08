@@ -37,12 +37,11 @@ function FakeBaycTokenInfo() {
                     <div>{attribute}</div>
                 <br></br>
             if({image}!=""){
-            <>
-            
-            <IpfsImage hash={image}/>
-            </>
-}
-            </div>                    
+                <>
+                    <IpfsImage hash={image}/>
+                </>
+            }
+        </div>                    
     )
 }
 

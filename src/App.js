@@ -8,6 +8,7 @@ import ChainInfo from "./pages/ChainInfo";
 import NotFound from "./pages/NotFound";
 import FakeBayc from "./pages/FakeBayc";
 import FakeBaycTokenInfo from './pages/FakeBaycTokenInfo';
+import FakeNefturians from './pages/FakeNefturians';
 import Main from './pages/Main';
 import Connect from './utils/Connect';
 
@@ -26,6 +27,7 @@ const [tokenId, setTokenId] = useState(0);
           <Route path="ChainInfo" element={<ChainInfo />} />
           <Route path="FakeBayc" element={<FakeBayc />} />
           <Route path="FakeBaycTokenInfo" element={<FakeBaycTokenInfo />} />
+          <Route path="FakeNefturians" element={<FakeNefturians />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </BrowserRouter>
