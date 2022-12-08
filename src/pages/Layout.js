@@ -20,6 +20,9 @@ const Layout = () => {
             <li>
                 <Link to="/FakeNefturians">Fake Nefturians</Link>
             </li>
+            <li>
+                <Link to="/FakeNefturiansUserInfo">Fake Nefturians User Info</Link>
+            </li>
             </ul>
         </nav>
     <Outlet />
