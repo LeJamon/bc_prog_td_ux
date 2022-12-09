@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useEffect, useState} from "react";
 import Web3 from "web3";
 
 function ChainInfo(){
@@ -7,6 +7,10 @@ function ChainInfo(){
 const [account, setAccount] = useState(); 
 const [chain, setChain] = useState(); 
 const [block, setblock] = useState(); 
+
+useEffect(()=>{
+  info(); 
+})
 
 //comportement zone
 const info = async()=>  {
@@ -26,7 +30,7 @@ const info = async()=>  {
  //render
     return (
         <div>
-          <button onClick={info}>Click here to get info</button>
+          
             <div>{account}</div>
             <br></br>
             <div>{chain}</div>

@@ -10,12 +10,15 @@ var contract = new web3.eth.Contract(contract_abi, contract_address);
 
 
 
-function FakeNefturiansUserInfo(props){
+function FakeNefturiansUserInfo(){
 
     const[balance, setBalance] = useState(0);
     const [list, setList] = useState([]);
 
-    
+    useEffect(()=>{
+        renderList();
+    }
+    )
        
     
     async function getToken(){
@@ -44,9 +47,8 @@ function FakeNefturiansUserInfo(props){
     }
     
     const renderList = async()=>{
-    
-        await getToken(); 
-    list.map((item, index) => 
+         await getToken(); 
+        list.map((item, index) => 
                                <div key={index}>
                                 <br></br>{item}</div>
                              );
@@ -54,10 +56,10 @@ function FakeNefturiansUserInfo(props){
     }
     return(
         <div>
-            <button onClick={renderList}>Get your token Infos</button>
-            if({list}!=[]){
+             
+            if {list}!=[]{
             <div>
-                {renderList}   
+                {renderList}
             </div>
             }
         </div>            

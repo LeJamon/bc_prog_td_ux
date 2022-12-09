@@ -23,6 +23,9 @@ const Layout = () => {
             <li>
                 <Link to="/FakeNefturiansUserInfo">Fake Nefturians User Info</Link>
             </li>
+            <li>
+                <Link to="/FakeMeebits">Fake Meebits</Link>
+            </li>
             </ul>
         </nav>
     <Outlet />

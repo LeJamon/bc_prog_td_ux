@@ -1,6 +1,5 @@
-function FakeMeebits(){
+export default function FakeMeebits(){
     return(
-        <div></div>
+        <div>bite</div>
     )
 }
-export default FakeMeebits; 

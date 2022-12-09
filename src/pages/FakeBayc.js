@@ -16,7 +16,9 @@ const contract_address = "0x1dA89342716B14602664626CD3482b47D5C2005E";
 let web3 = new Web3(window.ethereum);
 var contract = new web3.eth.Contract(contract_abi, contract_address);
 
- 
+ useEffect(()=>{
+    GetSupplyAndName(); 
+ })
 
 async function GetSupplyAndName(){
  
@@ -36,7 +38,7 @@ async function MintNft(){
 
     return(
         <div>
-        <button onClick={GetSupplyAndName}>get Name and Supply</button>
+       
         <div>{name}</div>
         <div>{supply}</div>
         <button onClick={MintNft}>claim a free nft</button>

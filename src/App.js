@@ -12,6 +12,7 @@ import FakeNefturians from './pages/FakeNefturians';
 import FakeNefturiansUserInfo from './pages/FakeNefturiansUserInfo';
 import Main from './pages/Main';
 import Connect from './utils/Connect';
+import FakeMeebits from './pages/FakeMeebits'; 
 
 
 export default function App(){
@@ -30,6 +31,8 @@ const [tokenId, setTokenId] = useState(0);
           <Route path="FakeBaycTokenInfo" element={<FakeBaycTokenInfo />} />
           <Route path="FakeNefturians" element={<FakeNefturians />} />
           <Route path='FakeNefturiansUserInfo' element={< FakeNefturiansUserInfo/>} />
+          <Route path='FakeMeebits' element={< FakeMeebits/>} />
+
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </BrowserRouter>
