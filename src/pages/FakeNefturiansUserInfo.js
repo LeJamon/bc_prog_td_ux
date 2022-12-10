@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Web3 from "web3";
+import Home from "./HomeButton";
 
 const contract_abi = require("../contract/FakeNefturians.json").abi; 
 const contract_address = "0x9bAADf70BD9369F54901CF3Ee1b3c63b60F4F0ED"; 
@@ -62,6 +63,8 @@ function FakeNefturiansUserInfo(){
                 {renderList}
             </div>
             }
+            <div></div>
+        <Home></Home>
         </div>            
 
     )

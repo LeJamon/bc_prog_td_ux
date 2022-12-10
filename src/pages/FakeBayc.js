@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Web3 from 'web3';
-
+import Home from './HomeButton';
 
 function FakeBayc(){
 
@@ -42,6 +42,8 @@ async function MintNft(){
         <div>{name}</div>
         <div>{supply}</div>
         <button onClick={MintNft}>claim a free nft</button>
+        <div></div>
+        <Home></Home>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState} from "react";
 import Web3 from "web3";
+import Home from "./HomeButton";
 
 function ChainInfo(){
 
@@ -35,7 +36,9 @@ const info = async()=>  {
             <br></br>
             <div>{chain}</div>
             <br></br>
-            <div>{block }</div>      
+            <div>{block }</div>     
+            <div></div>
+            <Home></Home> 
         </div>
     ); 
 }

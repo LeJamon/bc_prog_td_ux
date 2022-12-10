@@ -1,5 +1,6 @@
 import Web3 from "web3";
 import { useState } from "react";
+import Home from "./HomeButton";
 
 export default function FakeMeebits(){
     
@@ -35,8 +36,15 @@ export default function FakeMeebits(){
 
 return(
     <div>
-      <input type="text"value={tokenId} onChange={e=>handleChamp(e)}/>
+      <br></br>
+      <div>Please choose the token id you want to mint</div>
+      <br></br>
+      <input type="number"value={tokenId} onChange={e=>handleChamp(e)}/>
+      <br></br>
+      <br></br>
       <button onClick={Mint}> mint</button>
+      <div></div>
+        <Home></Home>
     </div>
 )
 }

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { IpfsImage } from 'react-ipfs-image';
 import Web3 from "web3";
+import Home from "./HomeButton";
+
 function FakeBaycTokenInfo() {
     
     //state zone 
@@ -30,7 +32,7 @@ function FakeBaycTokenInfo() {
     
     return (
         <div>
-            <input type="text"value={tokenId} onChange={e=>handleChamp(e)}/>
+            <input type="number"value={tokenId} onChange={e=>handleChamp(e)}/>
                 <br></br>
                     <button onClick={GetTokenInfo}> Get token info</button>
                     <br></br>
@@ -41,6 +43,8 @@ function FakeBaycTokenInfo() {
                     <IpfsImage hash={image}/>
                 </>
             }
+            <div></div>
+        <Home></Home>
         </div>                    
     )
 }
