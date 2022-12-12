@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import Home from './HomeButton';
-
+import ChangeNetwork from '../utils/ChangeNetwork';
 function FakeBayc(){
 
 // state zone 
@@ -29,10 +29,12 @@ async function GetSupplyAndName(){
 }
 
 async function MintNft(){
- 
+    let a = await ChangeNetwork(); 
+    if(a===true){
     //use window.ethereum to get the account instead of the var web3
     const accounts = await window.ethereum.request({method: 'eth_requestAccounts' }); 
     await contract.methods.claimAToken().send({from: accounts[0]}).then(console.log); 
+    }
 }
 
 

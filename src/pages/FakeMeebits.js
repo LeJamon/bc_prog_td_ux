@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import { useState } from "react";
 import Home from "./HomeButton";
-
+import ChangeNetwork from "../utils/ChangeNetwork";
 export default function FakeMeebits(){
     
   const jsonSignature = require("../contract/sig.json"); 
@@ -17,18 +17,21 @@ export default function FakeMeebits(){
 
 
   async function Mint(){
-    const accounts = await window.ethereum.request({method: 'eth_requestAccounts' });
-    // check that we can mint the token
-    if(await contract.methods.tokensThatWereClaimed(tokenId).call()){
-    alert("This token has alredy been mint"); 
-    throw Error("already minted");  
-  }else{
-    const _signature = jsonSignature[tokenId].signature;  
-    await contract.methods.claimAToken(tokenId,_signature).send({from: accounts[0]});
-    alert("token has been minted");
+    let a = await ChangeNetwork(); 
+       
+        if(a===true){
+      const accounts = await window.ethereum.request({method: 'eth_requestAccounts' });
+      // check that we can mint the token
+      if(await contract.methods.tokensThatWereClaimed(tokenId).call()){
+      alert("This token has alredy been mint"); 
+      throw Error("already minted");  
+    }else{
+      const _signature = jsonSignature[tokenId].signature;  
+      await contract.methods.claimAToken(tokenId,_signature).send({from: accounts[0]});
+      alert("token has been minted");
+    }
   }
 }
-
 
   const handleChamp = (event)=>{
      setTokenId(event.target.value)

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IpfsImage } from 'react-ipfs-image';
 import Web3 from "web3";
 import Home from "./HomeButton";
+import ChangeNetwork from "../utils/ChangeNetwork";
 
 function FakeBaycTokenInfo() {
     
@@ -21,14 +22,24 @@ function FakeBaycTokenInfo() {
     }
 
     async function GetTokenInfo(){
-        let info= await contract.methods.tokenURI(tokenId).call();
-        const jsonURI = await fetch(info).then(res => res.json()); 
+       let a = await ChangeNetwork(); 
+       
+        if(a===true){ // good network
+           
+            if(tokenId >= parseInt(await contract.methods.tokenCounter().call())){
+              alert("This token has not been minted"); 
+              throw Error("token out of bound")
+            }else{
+            let info= await contract.methods.tokenURI(tokenId).call();
+            const jsonURI = await fetch(info).then(res => res.json()); 
 
-        setAttribute(JSON.stringify(jsonURI.attributes));  
-        setImage(jsonURI.image); 
-        console.log(jsonURI); 
+            setAttribute(JSON.stringify(jsonURI.attributes));  
+            setImage(jsonURI.image); 
+            console.log(jsonURI); 
+            }
+        
     }
-    
+} 
     
     return (
         <div>
