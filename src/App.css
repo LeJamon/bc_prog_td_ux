@@ -1,7 +1,71 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: myFirstFont;
+  src: url(/public/Buran_USSR.ttf);
 }
 
+*{
+  font-family: myFirstFont;
+}
+
+.Info{
+  color: #fddb3a;
+  font-size: 40px;
+}
+.App {
+  text-align: center;
+  font-size: 120px;
+}
+.Wallet{
+  position: absolute; 
+  top: 0;
+  right: 25px;
+}
+.ChainInfo{
+  position: absolute; 
+  bottom: 500px;
+  right: -350px;
+}
+
+.FakeBayc{
+  position: absolute; 
+  top: -500px;
+  left: -350px;
+  font-size: 120px;
+}
+
+.FakeNef{
+  position: absolute; 
+  bottom: -200px;
+  left: -350px;
+}
+.FakeBaycInfo{
+  position: absolute; 
+  top: -200px;
+  left: -600px;
+}
+.Meebits{
+  position: absolute; 
+  top: -200px;
+  right:-600px;
+}
+.FajeNefUserInfo{
+  position: absolute; 
+  bottom: -250px;
+  right:-350px;
+}
+html,body{
+  margin:0; 
+  padding:0; 
+  height: 100%; 
+
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +99,94 @@
   to {
     transform: rotate(360deg);
   }
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #272727;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navMenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navMenu li {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 80px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #fddb3a;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #fddb3a;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(110px);
+  transform: translateX(110px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(285px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.bout a{
+  font-size: 60px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button{
+  font-size: 20px;
 }

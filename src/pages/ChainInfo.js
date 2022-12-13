@@ -32,11 +32,11 @@ const info = async()=>  {
     return (
         <div>
           
-            <div>{account}</div>
+            <div className="Info">{account}</div>
             <br></br>
-            <div>{chain}</div>
+            <div className="Info">{chain}</div>
             <br></br>
-            <div>{block }</div>     
+            <div className="Info">{block }</div>     
             <div></div>
             <Home></Home> 
         </div>

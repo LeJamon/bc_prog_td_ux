@@ -23,7 +23,7 @@ function Connect() {
   }
   const web3 = new Web3(provider);
   return(
-    <button onClick={Connect}>Connect Wallet</button>
+    <button onClick={Connect} className="Wallet">Connect Wallet</button>
   )
 };
 

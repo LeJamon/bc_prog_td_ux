@@ -40,7 +40,7 @@ export default function FakeMeebits(){
 return(
     <div>
       <br></br>
-      <div>Please choose the token id you want to mint</div>
+      <div className="Info">Please choose the token id you want to mint</div>
       <br></br>
       <input type="number"value={tokenId} onChange={e=>handleChamp(e)}/>
       <br></br>

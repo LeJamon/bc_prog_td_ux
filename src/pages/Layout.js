@@ -3,28 +3,28 @@ import { Link, Outlet } from "react-router-dom";
 const Layout = () => {
     return (
     <>
-        <nav>
+        <nav className="navMenu">
             <ul>
-            <li>
-                <Link to="/">Home</Link>
+            <li className="bout Home">
+                <Link to="/">Home </Link>
             </li>
-            <li>
-                <Link to="/ChainInfo">ChainInfo</Link>
+            <li className="bout ChainInfo">
+                <Link to="/ChainInfo">_Chain_Info_</Link>
             </li>
-            <li>
-                <Link to="/FakeBayc">fakeBayc</Link>
+            <li className="bout FakeBayc">
+                <Link to="/FakeBayc">-/fake_Bayc/-___</Link>
             </li>
-            <li>
-                <Link to="/FakeBaycTokenInfo">fakeBaycTokenInfo</Link>
+            <li className="bout FakeBaycInfo">
+                <Link to="/FakeBaycTokenInfo">%fake_Bayc+ _Token_Info_</Link>
             </li>
-            <li>
-                <Link to="/FakeNefturians">Fake Nefturians</Link>
+            <li className="bout FakeNef">
+                <Link to="/FakeNefturians">______-_/Fake_Nefturians__</Link>
             </li>
-            <li>
-                <Link to="/FakeNefturiansUserInfo">Fake Nefturians User Info</Link>
+            <li className="bout FajeNefUserInfo">
+                <Link to="/FakeNefturiansUserInfo">_Fake_Nefturians-User_Info</Link>
             </li>
-            <li>
-                <Link to="/FakeMeebits">Fake Meebits</Link>
+            <li className="bout Meebits">
+                <Link to="/FakeMeebits">Fake___ -- ___Meebits</Link>
             </li>
             </ul>
         </nav>

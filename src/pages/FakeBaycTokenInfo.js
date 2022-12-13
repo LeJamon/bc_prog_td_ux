@@ -47,7 +47,7 @@ function FakeBaycTokenInfo() {
                 <br></br>
                     <button onClick={GetTokenInfo}> Get token info</button>
                     <br></br>
-                    <div>{attribute}</div>
+                    <div className="Info">{attribute}</div>
                 <br></br>
            {image!=="" &&
                 <>
