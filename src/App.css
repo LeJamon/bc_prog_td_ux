@@ -7,6 +7,43 @@
   font-family: myFirstFont;
 }
 
+.barre{
+  border: 2px solid #00cc66;
+  width: 30%;
+  height: 5%;  
+  border-radius: 4px;
+  position: absolute;
+  top: 15%; 
+  left: 33%;
+  text-align: center;
+  font-size: 40px;
+  
+}
+
+
+.ClickInfo {
+  background-color: #00cc66; /* Green */
+  position: absolute; 
+  top: 35%;
+  right: 10%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+
+
+  font-size: 32px;
+}
+
+.Click{
+  background-color: #00cc66; /* Green */
+  position: absolute; 
+
+  
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 32px;
+}
 .Info{
   color: #fddb3a;
   font-size: 40px;

@@ -56,14 +56,13 @@ function FakeNefturiansUserInfo(){
     
     }
     return(
-        <div>
+        <div style={{color:"white", textAlign:"center", fontSize:"32px"}}>
              
-            if {list}!=[]{
-            <div>
+                if {list}!==[]{
+                <>
                 {renderList}
-            </div>
+                </>
             }
-            <div></div>
         <Home></Home>
         </div>            
 

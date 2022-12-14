@@ -22,7 +22,9 @@ function FakeBaycTokenInfo() {
     }
 
     async function GetTokenInfo(){
-       let a = await ChangeNetwork(); 
+       if(tokenId!=null){
+       
+        let a = await ChangeNetwork(); 
        
         if(a===true){ // good network
            
@@ -37,21 +39,24 @@ function FakeBaycTokenInfo() {
             setImage(jsonURI.image); 
             console.log(jsonURI); 
             }
-        
+        }
+    }else{
+        alert("Please choose a valid TokenId"); 
+        throw Error("Invalid tokenId"); 
     }
 } 
     
     return (
         <div>
-            <input type="number"value={tokenId} onChange={e=>handleChamp(e)}/>
-                <br></br>
-                    <button onClick={GetTokenInfo}> Get token info</button>
-                    <br></br>
+            <input className="barre" type="number"value={tokenId} onChange={e=>handleChamp(e)}/>
+            <div>
+            <button className ="ClickInfo" onClick={GetTokenInfo}> Get token info</button>
+            </div>
                     <div className="Info">{attribute}</div>
                 <br></br>
            {image!=="" &&
                 <>
-                    <IpfsImage hash={image}/>
+                    <IpfsImage className="nft"hash={image}/>
                 </>
             }
             <div></div>

@@ -38,8 +38,8 @@ function FakeNefturians(){
         <div>
             
             <br></br>
-            <div>{priceETH} ETH</div>
-            <button onClick={BuyToken}> Buy Token </button>
+            <div className="Info">{priceETH} ETH</div>
+            <button className ="Click" onClick={BuyToken}> Buy Token </button>
             <div></div>
         <Home></Home>
         </div>

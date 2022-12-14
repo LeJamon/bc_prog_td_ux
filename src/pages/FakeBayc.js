@@ -43,7 +43,7 @@ async function MintNft(){
        
         <div className="Info">{name}</div>
         <div className="Info">{supply}</div>
-        <button onClick={MintNft}>claim a free nft</button>
+        <button className ="Click" onClick={MintNft}>claim a free nft</button>
         <div></div>
         <Home></Home>
         </div>
